@@ -1,0 +1,9 @@
+---
+- name: copy
+  hosts: First-gkl
+  become: true
+  become_user: root
+  gather_facts: true
+  tasks:
+    - name: "copy"
+      copy: src=/home/user/Documents/index.html dest=/home/user/desktop/index.html
